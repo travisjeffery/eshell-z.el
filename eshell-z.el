@@ -7,8 +7,8 @@
 (defvar eshell-z--map nil "Hash map mapping directories to z call count.")
 
 (defcustom eshell-z--file
-  "The file to save which directories to z."
   (expand-file-name "z" eshell-directory-name)
+  "The file to save which directories to z."
   :type 'file :group 'eshell-dirs)
 
 (defun eshell-z--load ()
