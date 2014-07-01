@@ -6,7 +6,6 @@
 ;; URL: https://github.com/travisjeffery/eshell-z.el
 ;; Keywords: eshell, convenience
 ;; Version: 0.0.1
-;; Package-Requires: ()
 
 ;; This file is NOT part of GNU Emacs.
 
@@ -34,8 +33,10 @@
 
 (require 'em-dirs)
 
+;;;###autoload
 (defvar eshell-z--map nil "Hash map mapping directories to z call count.")
 
+;;;###autoload
 (defcustom eshell-z--file
   (expand-file-name "z" eshell-directory-name)
   "The file to save which directories to z."
@@ -94,6 +95,7 @@
 
 (add-hook 'kill-emacs-hook 'eshell-z--save)
 
+;;;###autoload
 (defun eshell/z (&rest args)
   "eshell command to jump to the most-often-jumped directory corresponding to the given `args'."
   (let* ((args (eshell-flatten-list args))
