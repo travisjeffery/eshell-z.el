@@ -97,7 +97,7 @@
 
 ;;;###autoload
 (defun eshell/z (&rest args)
-  "eshell command to jump to the most-often-jumped directory corresponding to the given `args'."
+  "Eshell command to jump to the most-often-jumped directory corresponding to the given `ARGS'."
   (let* ((args (eshell-flatten-list args))
         (path (car args))
         (candidates (eshell-z--candidates))
