@@ -87,6 +87,8 @@
                    (when (> value 0)
                      (insert "(")
                      (prin1 key)
+                     (insert " . ")
+                     (prin1 (- value 0.01))
                      (insert ")\n")))
                  eshell-z--map)
         (delete-char -1)
